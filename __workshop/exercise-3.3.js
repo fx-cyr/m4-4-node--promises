@@ -4,10 +4,10 @@
 const opencage = require('opencage-api-client');
 require('dotenv').config();
 
-function getAddressFromPosition(lat, lng) {
+function getAddressFromPosition(lat, lgt) {
   const requestObj = {
     key: process.env.OPENCAGE_API_KEY,
-    q: `${lat}, ${lng}`
+    q: `${lat}, ${lgt}`
   };
 
   // return ...
@@ -25,3 +25,5 @@ function getAddressFromPosition(lat, lng) {
 getAddressFromPosition('48.8584', '2.2945').then((response) =>
   console.log(response)
 );
+
+
